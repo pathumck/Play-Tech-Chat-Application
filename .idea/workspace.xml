@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Doing Application Launcher and Navigation">
+    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Fix Login Navigation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <workItem from="1705440526990" duration="129000" />
       <workItem from="1705441037379" duration="938000" />
       <workItem from="1706779515111" duration="1472000" />
-      <workItem from="1706785186045" duration="2650000" />
+      <workItem from="1706785186045" duration="3630000" />
     </task>
     <task id="LOCAL-00001" summary="Doing basic ui">
       <option name="closed" value="true" />
@@ -105,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706785680090</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix Login Navigation">
+      <option name="closed" value="true" />
+      <created>1706788401210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706788401210</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Doing basic ui" />
     <MESSAGE value="Doing Application Launcher and Navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doing Application Launcher and Navigation" />
+    <MESSAGE value="Fix Login Navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Login Navigation" />
   </component>
 </project>
