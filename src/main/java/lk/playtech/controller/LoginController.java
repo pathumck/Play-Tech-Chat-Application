@@ -7,18 +7,35 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.playtech.Server.Server;
 
 import java.io.IOException;
 
 public class LoginController {
     @FXML
     private JFXButton btnJoin;
+    @FXML
+    private ImageView imgBackGround;
 
     @FXML
     private JFXTextField txtUserName;
+
     private String [] userNames = {"pathum", "lahiru", "chandana"};
+    private Server server;
+
+    public void initialize() {
+        new Thread(() -> {
+            try {
+                server = Server.getInstance();
+                server.makeSocket();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
 
     @FXML
     void btnJoinOnAction(ActionEvent event) throws IOException {

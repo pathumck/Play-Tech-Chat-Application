@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Fix Login Navigation">
+    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Modify client_form.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Server/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/icons/istockphoto-1330248664-612x612.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/LauncherWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/LauncherWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,29 +42,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LauncherWrapper.executor": "Run",
-    "Application.ServerLauncherWrapper.executor": "Run",
-    "Application.SeverLauncher.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pathum/IdeaProjects/INP/Play-Tech-Chat-Application",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LauncherWrapper.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ServerLauncherWrapper.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SeverLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pathum/IdeaProjects/INP/Play-Tech-Chat-Application&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/view/icons" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/view/icons" />
     </key>
@@ -68,6 +85,7 @@
       <set>
         <option value="bundled-js-predefined-1d06a55b98c1-3bb87179ee21-JavaScript-IU-241.9959.31" />
         <option value="jdk-11.0.22-corretto-11.0.22-27dd13112750-7460a670" />
+        <option value="jdk-11.0.22-corretto-11.0.22-5b172459f563-9b9d4d0b" />
       </set>
     </attachedChunks>
   </component>
@@ -87,7 +105,19 @@
       <workItem from="1705440526990" duration="129000" />
       <workItem from="1705441037379" duration="938000" />
       <workItem from="1706779515111" duration="1472000" />
-      <workItem from="1706785186045" duration="3630000" />
+      <workItem from="1706785186045" duration="8122000" />
+      <workItem from="1706796859582" duration="426000" />
+      <workItem from="1706797430978" duration="604000" />
+      <workItem from="1706799794602" duration="10405000" />
+      <workItem from="1706810933278" duration="4926000" />
+      <workItem from="1706816657287" duration="232000" />
+      <workItem from="1706816944928" duration="2078000" />
+      <workItem from="1706819296474" duration="29000" />
+      <workItem from="1706819482317" duration="30000" />
+      <workItem from="1706819516377" duration="102000" />
+      <workItem from="1706819772034" duration="219000" />
+      <workItem from="1706820050674" duration="2523000" />
+      <workItem from="1706823042210" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Doing basic ui">
       <option name="closed" value="true" />
@@ -113,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706788401210</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modified client_form.fxml">
+      <option name="closed" value="true" />
+      <created>1706788948221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706788948221</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +161,7 @@
     <MESSAGE value="Doing basic ui" />
     <MESSAGE value="Doing Application Launcher and Navigation" />
     <MESSAGE value="Fix Login Navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Login Navigation" />
+    <MESSAGE value="Modified client_form.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified client_form.fxml" />
   </component>
 </project>

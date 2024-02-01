@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.playtech.controller.ClientController">
    <children>
       <ScrollPane fx:id="scrollPane" layoutX="97.0" layoutY="32.0" prefHeight="315.0" prefWidth="425.0">
@@ -17,7 +16,7 @@
          </content>
       </ScrollPane>
       <TextField fx:id="txtMessege" layoutX="95.0" layoutY="360.0" prefHeight="25.0" prefWidth="425.0" />
-      <JFXButton fx:id="btnSend" layoutX="529.0" layoutY="354.0" prefHeight="25.0" prefWidth="32.0" text=" ">
+      <JFXButton fx:id="btnSend" layoutX="529.0" layoutY="354.0" onAction="#btnSendOnAction" prefHeight="25.0" prefWidth="32.0" text=" ">
          <graphic>
             <ImageView fx:id="imjSend" fitHeight="27.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                <image>

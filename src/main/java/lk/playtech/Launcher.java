@@ -19,4 +19,8 @@ public class Launcher extends Application {
         stage.setTitle("Login");
         stage.show();
     }
+    @Override
+    public void stop() {
+        System.exit(0);
+    }
 }
