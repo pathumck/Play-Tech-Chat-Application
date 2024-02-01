@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.playtech.controller.LoginController">
+   <children>
+      <JFXTextField fx:id="txtUserName" layoutX="81.0" layoutY="132.0" prefHeight="25.0" prefWidth="251.0" promptText="              Type your name here" />
+      <JFXButton fx:id="btnJoin" buttonType="RAISED" layoutX="170.0" layoutY="222.0" onAction="#btnJoinOnAction" style="-fx-background-color: green;" text="Join Chat" />
+      <JFXDialogLayout />
+      <Label layoutX="190.0" layoutY="40.0" text="Login" />
+   </children>
+</AnchorPane>
