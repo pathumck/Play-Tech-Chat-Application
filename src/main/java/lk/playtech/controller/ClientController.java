@@ -1,6 +1,7 @@
 package lk.playtech.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.vdurmont.emoji.Emoji;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,12 +11,15 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import lk.playtech.emoji.EmojiPicker;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -26,6 +30,9 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class ClientController {
+    @FXML
+    private AnchorPane pane;
+
     @FXML
     private JFXButton btnSend;
 
@@ -39,11 +46,10 @@ public class ClientController {
     private TextField txtMessege;
 
     @FXML
-    private JFXButton btnImoji;
-
+    private VBox vBox;
 
     @FXML
-    private VBox vBox;
+    private JFXButton btnEmoji;
 
     private Socket socket;
     private DataInputStream dataInputStream;
@@ -68,6 +74,7 @@ public class ClientController {
                 }
             }
         }).start();
+        emoji();
     }
 
     @FXML
@@ -120,15 +127,16 @@ public class ClientController {
         }
     }
 
-    public static void receiveMessage(String msg, VBox vBox) throws IOException {
+    public void receiveMessage(String msg, VBox vBox) throws IOException {
         if (msg.matches(".*\\.(png|jpe?g|gif)$")) {
+            Stage stage = (Stage) btnSend.getScene().getWindow();
             HBox hBoxName = new HBox();
             hBoxName.setAlignment(Pos.CENTER_LEFT);
-            Text textName = new Text(msg.split("[,]")[0]);
+            Text textName = new Text(stage.getTitle());
             TextFlow textFlowName = new TextFlow(textName);
             hBoxName.getChildren().add(textFlowName);
 
-            Image image = new Image(msg.split("[,]")[1]);
+            Image image = new Image(msg);
             ImageView imageView = new ImageView(image);
             imageView.setFitHeight(200);
             imageView.setFitWidth(200);
@@ -137,9 +145,19 @@ public class ClientController {
             hBox.setPadding(new Insets(5, 5, 5, 10));
             hBox.getChildren().add(imageView);
 
+            HBox hBoxTime = new HBox();
+            hBoxTime.setAlignment(Pos.CENTER_LEFT);
+            hBoxTime.setPadding(new Insets(0, 5, 5, 10));
+            String stringTime = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+            Text time = new Text(stringTime);
+            time.setStyle("-fx-font-size: 8");
+
+            hBoxTime.getChildren().add(time);
+
             Platform.runLater(() -> {
                 vBox.getChildren().add(hBoxName);
                 vBox.getChildren().add(hBox);
+                vBox.getChildren().add(hBoxTime);
             });
         } else {
             String name = msg.split("-")[0];
@@ -183,4 +201,81 @@ public class ClientController {
         }
     }
 
+    @FXML
+    void btnImageBrowserOnAction(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.bmp", "*.jpeg")
+        );
+
+        Stage stage = (Stage) btnSend.getScene().getWindow();
+
+        File file = fileChooser.showOpenDialog(stage);
+
+        if (file != null) {
+            String sendImage = file.toURI().toString();
+            System.out.println("Image URL: " + sendImage);
+            sendImageToServer(sendImage);
+        }
+    }
+
+    private void sendImageToServer(String sendImage) {
+        Image image = new Image(sendImage);
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(200);
+        imageView.setFitWidth(200);
+
+        HBox hBox = new HBox();
+        hBox.setPadding(new Insets(5,5,5,10));
+        hBox.getChildren().add(imageView);
+        hBox.setAlignment(Pos.CENTER_RIGHT);
+
+        HBox hBoxTime = new HBox();
+        hBoxTime.setAlignment(Pos.CENTER_RIGHT);
+        hBoxTime.setPadding(new Insets(0, 5, 5, 10));
+        String stringTime = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+        Text time = new Text(stringTime);
+        time.setStyle("-fx-font-size: 8");
+
+        hBoxTime.getChildren().add(time);
+
+        vBox.getChildren().add(hBox);
+        vBox.getChildren().add(hBoxTime);
+
+        try {
+            dataOutputStream.writeUTF(sendImage);
+            dataOutputStream.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void emoji() {
+        EmojiPicker emojiPicker = new EmojiPicker();
+        VBox vBox = new VBox(emojiPicker);
+        vBox.setPrefSize(75,300);
+        vBox.setLayoutX(40);
+        vBox.setLayoutY(60);
+        //vBox.setStyle("-fx-font-size: 30");
+
+        pane.getChildren().add(vBox);
+        emojiPicker.setVisible(false);
+
+        btnEmoji.setOnAction(MouseEvent ->{
+            if(emojiPicker.isVisible()){
+                emojiPicker.setVisible(false);
+            }else{
+                emojiPicker.setVisible(true);
+            }
+        });
+
+        emojiPicker.getEmojiListView().setOnMouseClicked(mouseEvent -> {
+            String selectedEmoji = emojiPicker.getEmojiListView().getSelectionModel().getSelectedItem();
+
+            if (selectedEmoji != null){
+                txtMessege.setText(txtMessege.getText() + selectedEmoji);
+            }
+            emojiPicker.setVisible(false);
+        });
+    }
 }

@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Modify client_form.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Server/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/icons/istockphoto-1330248664-612x612.jpg" afterDir="false" />
+    <list default="true" id="8cb4cb81-a37d-46ba-95f9-450035cac642" name="Changes" comment="Connect Client Server">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/emoji/EmojiPicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/LauncherWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/LauncherWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/playtech/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/client_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +46,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pathum/IdeaProjects/INP/Play-Tech-Chat-Application&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pathum/IdeaProjects/chat-app-last&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +72,26 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="lk.playtech" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LauncherWrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lk.playtech.LauncherWrapper" />
+      <module name="Play-Tech-Chat-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lk.playtech.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LauncherWrapper" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,6 +131,14 @@
       <workItem from="1706819772034" duration="219000" />
       <workItem from="1706820050674" duration="2523000" />
       <workItem from="1706823042210" duration="17000" />
+      <workItem from="1706823066780" duration="329000" />
+      <workItem from="1706843529951" duration="407000" />
+      <workItem from="1706845414670" duration="725000" />
+      <workItem from="1706858945121" duration="898000" />
+      <workItem from="1706865570690" duration="314000" />
+      <workItem from="1706875881551" duration="98000" />
+      <workItem from="1706876094663" duration="11217000" />
+      <workItem from="1706890028673" duration="3271000" />
     </task>
     <task id="LOCAL-00001" summary="Doing basic ui">
       <option name="closed" value="true" />
@@ -151,7 +172,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706788948221</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Connect Client Server">
+      <option name="closed" value="true" />
+      <created>1706823096382</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706823096382</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Connect Client Server">
+      <option name="closed" value="true" />
+      <created>1706823110977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706823110977</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Connect Client Server">
+      <option name="closed" value="true" />
+      <created>1706823314773</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706823314773</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +207,7 @@
     <MESSAGE value="Doing Application Launcher and Navigation" />
     <MESSAGE value="Fix Login Navigation" />
     <MESSAGE value="Modified client_form.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified client_form.fxml" />
+    <MESSAGE value="Connect Client Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect Client Server" />
   </component>
 </project>
